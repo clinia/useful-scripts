@@ -11,7 +11,7 @@ cat << 'EOF' > "$INSTALL_DIR/authb.sh"
 export BOUNDARY_AUTH_METHOD_ID=amoidc_Gq5t6fwExE
 export BOUNDARY_ADDR=https://boundary.clinia.dev
 export BOUNDARY_SCOPE_ID=o_wwiZDNQyle
-export BOUNDARY_RDS_PORT=5434
+export BOUNDARY_RDS_PORT=5432
 
 authenticate() {
     boundary authenticate oidc -auth-method-id $BOUNDARY_AUTH_METHOD_ID
