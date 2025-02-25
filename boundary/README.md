@@ -1,6 +1,6 @@
 # Boundary Scripts Setup
 
-This repository contains scripts to manage Boundary authentication and secure connections for RDS, Trino, and Dedalus (FHIR) services. Follow the instructions below to set up and use the scripts.
+This repository contains scripts to manage Boundary authentication and secure connections for RDS and Trino services. Follow the instructions below to set up and use the scripts.
 
 ## Installation
 
@@ -39,12 +39,10 @@ The installation script sets up the following scripts and aliases:
   - `authb.sh`: Handles Boundary authentication and provides a centralized connection function.
   - `start-rds.sh`: Manages a secure connection to the RDS service.
   - `start-trino.sh`: Manages a secure connection to the Trino service.
-  - `start-dedalus.sh`: Manages a secure connection to the FHIR target under the Retrieval scope.
 - **Aliases:**
   - `authb`: Runs the Boundary authentication function.
   - `start-rds`: Starts the secure connection loop for the RDS service.
   - `start-trino`: Starts the secure connection loop for the Trino service.
-  - `start-dedalus`: Starts the secure connection loop for the Dedalus (FHIR) service.
   - `kill_port`: Kills any process running on a specified port.
 
 ## Usage
@@ -71,12 +69,6 @@ This command will authenticate with Boundary using the configured OIDC method.
 
   ```sh
   start-trino
-  ```
-
-- **Dedalus (FHIR) Service**
-
-  ```sh
-  start-dedalus
   ```
 
 ### Killing Processes on a Port
