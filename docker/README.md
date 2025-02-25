@@ -27,6 +27,7 @@ The installation sets up the following functions and aliases:
   - `docker_system_prune`: Prunes the entire Docker system (images, containers, volumes, and networks).
   - `docker_restart_container`: Restarts a Docker container given its ID or name.
   - `docker_list`: Lists running Docker containers in a formatted table.
+  - `docker_tail_logs`: Tails the logs of a Docker container.
 - **Aliases:**
   - `docker_clean_images`: Alias for cleaning up dangling images.
   - `docker_clean_containers`: Alias for removing exited or created containers.

@@ -48,6 +48,41 @@ git_summary() {
 }
 
 ##
+# Stashes current changes with an optional message.
+#
+# @param message The message for the stash.
+git_stash() {
+  git stash push -m "${1:-"Quick stash"}"
+}
+
+##
+# Lists all stashes.
+git_stash_list() {
+  git stash list
+}
+
+##
+# Applies a specified stash.
+#
+# @param stash The stash reference (e.g., stash@{0}).
+git_stash_apply() {
+  git stash apply "$1"
+}
+
+
+##
+# Switches to a different branch using fzf.
+#
+# @return void
+git_switch() {
+  local branch
+  branch=$(git branch | sed 's/* //' | fzf --prompt="Switch to branch > ")
+  if [ -n "$branch" ]; then
+    git checkout "$branch"
+  fi
+}
+
+##
 # Alias: gmerge - Pulls latest changes and merges origin/master.
 ##
 alias gmerge="git pull && git merge origin/master"

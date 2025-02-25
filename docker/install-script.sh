@@ -64,12 +64,32 @@ docker_list() {
   docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"
 }
 
+##
+# Tails the logs of a Docker container.
+#
+# @param container The container ID or name.
+docker_tail_logs() {
+  docker logs -f "$1"
+}
+
 # Aliases for convenience
 alias docker_clean_images="docker_clean_images"
 alias docker_clean_containers="docker_clean_containers"
 alias docker_prune="docker_system_prune"
 alias docker_restart="docker_restart_container"
 alias docker_ls="docker_list"
+alias dcup="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dclogs="docker-compose logs -f"
+alias dcrun="docker-compose run --rm"
+alias dce="docker-compose exec"
+alias dcb="docker-compose build"
+alias dcp="docker-compose pull"
+alias dcrestart="docker-compose restart"
+alias dcls="docker-compose ps"
+alias dcl="docker-compose logs"
+alias dcrm="docker-compose rm"
+alias dcv="docker-compose -v"
 EOF
 
 # Make docker-scripts.sh executable

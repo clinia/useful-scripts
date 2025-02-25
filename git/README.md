@@ -25,6 +25,10 @@ The installation sets up the following functions and aliases:
   - `git_current_branch`: Displays the current Git branch.
   - `git_last_commit`: Shows the last commit on the current branch.
   - `git_summary`: Provides a summary of the repository status.
+  - `git_switch`: Switches to a different branch using fzf.
+  - `git_stash`: Stashes current changes with an optional message.
+  - `git_stash_list`: Lists all stashes.
+  - `git_stash_apply`: Applies a specified stash.
 - **Aliases:**
   - `gmerge`: Pulls the latest changes and merges `origin/master`.
   - `gcreate`: Creates and checks out a new branch.
