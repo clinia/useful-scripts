@@ -1,6 +1,6 @@
 # Git Scripts Setup
 
-This repository provides custom Git functions and aliases to enhance your Git workflows. Follow the instructions below to set up and use these scripts.
+This directory provides custom Git functions and aliases to enhance your Git workflows. Follow the instructions below to set up and use these scripts.
 
 ## Installation
 

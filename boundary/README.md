@@ -1,6 +1,6 @@
 # Boundary Scripts Setup
 
-This repository contains scripts to manage Boundary authentication and secure connections for RDS and Trino services. Follow the instructions below to set up and use the scripts.
+This directory contains scripts to manage Boundary authentication and secure connections for RDS and Trino services. Follow the instructions below to set up and use the scripts.
 
 ## Installation
 

@@ -1,6 +1,6 @@
 # Docker Scripts Setup
 
-This repository provides custom Docker functions and aliases for common Docker operations. Follow the instructions below to set up and use these scripts.
+This directory provides custom Docker functions and aliases for common Docker operations. Follow the instructions below to set up and use these scripts.
 
 ## Installation
 
