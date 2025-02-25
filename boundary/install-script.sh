@@ -94,17 +94,6 @@ kill_port() {
 }
 EOF
 
-# Create start-dedalus.sh script
-cat << 'EOF' > "$INSTALL_DIR/start-dedalus.sh"
-#!/bin/bash
-##
-# @file start-dedalus.sh
-# @brief Initiates a connection to the FHIR target under the Retrieval scope on port 3591.
-##
-source "$HOME/boundary-scripts/authb.sh"
-start_connection "Retrieval" "FHIR" 3591
-EOF
-
 # Create start-rds.sh script
 cat << 'EOF' > "$INSTALL_DIR/start-rds.sh"
 #!/bin/bash
@@ -128,7 +117,7 @@ start_connection "Retrieval" "Trino" 8080
 EOF
 
 # Make scripts executable
-chmod +x "$INSTALL_DIR/authb.sh" "$INSTALL_DIR/start-dedalus.sh" "$INSTALL_DIR/start-rds.sh" "$INSTALL_DIR/start-trino.sh"
+chmod +x "$INSTALL_DIR/authb.sh" "$INSTALL_DIR/start-rds.sh" "$INSTALL_DIR/start-trino.sh"
 
 # Update .zprofile to include aliases and source the authb.sh script if not already added
 if ! grep -q 'boundary-scripts' "$HOME/.zprofile"; then
@@ -140,7 +129,6 @@ source \$HOME/boundary-scripts/authb.sh
 alias authb="authenticate"
 alias start-rds="start_connection 'Retrieval' 'RDS' \$BOUNDARY_RDS_PORT"
 alias start-trino="start_connection 'Retrieval' 'Trino' 8080"
-alias start-dedalus="start_connection 'Retrieval' 'FHIR' 3591"
 alias kill_port="kill_port"
 EOF
 fi
