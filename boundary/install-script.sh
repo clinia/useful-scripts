@@ -37,9 +37,10 @@ authenticate() {
   boundary authenticate oidc -auth-method-id "$BOUNDARY_AUTH_METHOD_ID"
 }
 
-/**
- * Checks if the boundary command requires authentication and reauthenticates if needed.
- */
+##
+# Checks if the boundary command requires authentication and reauthenticates if needed.
+#
+# @return void
 check_auth() {
   local authStatus
   authStatus=$(boundary scopes list -recursive -format=json 2>&1)
